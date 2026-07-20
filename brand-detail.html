@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rein & Hide - Brand Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .back-btn {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 25px;
+            transition: 0.2s;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            color: #60a5fa;
+        }
+        .project-header {
+            margin-bottom: 30px;
+        }
+        .project-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .tech-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .tech-badges span {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        .project-content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        @media (max-width: 950px) {
+            .project-content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        .overview-section h2, .brand-insights-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+        .overview-section p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .features-list {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .features-list li {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .features-list li strong {
+            color: #10b981;
+        }
+        
+        /* Interactive Brand Insights Card */
+        .insights-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        .insights-header {
+            display: flex;
+         justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 12px;
+        }
+        .insights-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 500px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .product-item {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .product-item:hover {
+            border-color: #10b981;
+            transform: translateY(-2px);
+        }
+        .product-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        .product-item h4 {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 0;
+        }
+        .operations-board {
+            background: #111827;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #1e293b;
+            margin-bottom: 20px;
+        }
+        .operations-board h4 {
+            font-size: 14px;
+            color: #10b981;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 5px;
+        }
+        .operations-list {
+            list-style: none;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+        .operations-list li {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .op-label {
+            color: #94a3b8;
+        }
+        .op-val {
+            font-weight: 500;
+            color: #f8fafc;
+        }
+        
+        /* New Instagram Button Style */
+        .insta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.25);
+        }
+        .insta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+        }
+        .insta-btn-icon {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        
+        <header class="project-header">
+            <h1>Rein & Hide</h1>
+            <div class="tech-badges">
+                <span>WordPress</span>
+                <span>WooCommerce</span>
+                <span>Meta Commerce</span>
+                <span>Brand Operations</span>
+            </div>
+        </header>
+
+        <div class="project-content-grid">
+            <div class="overview-section">
+                <h2>Brand Overview</h2>
+                <p>Rein & Hide is an equestrian brand specializing in the manufacture and delivery of premium, handmade leather products. We supply professional-grade equestrian tack alongside custom leather accessories, combining classic leather craftsmanship with digital retail technology.</p>
+                
+                <h2>Key Deliverables & Tech</h2>
+                <ul class="features-list">
+                    <li><strong>WordPress Integration:</strong> Developing an online store structure optimized for user experience and fast checkout conversions.</li>
+                    <li><strong>Social Commerce:</strong> Integrating Meta Commerce Manager to establish live catalog synchronization for Instagram and Facebook Shop.</li>
+                    <li><strong>Order Logistics:</strong> Setting up order tracking pipelines, shipping configurations, and dynamic pricing setups.</li>
+                </ul>
+            </div>
+
+            <div class="brand-insights-section">
+                <h2>Brand Dashboard Preview</h2>
+                <div class="insights-card">
+                    <div class="insights-header">
+                        <span class="insights-title"><span class="dot"></span> Live Catalog Segments</span>
+                    </div>
+                    
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <span class="product-icon">🏇</span>
+                            <h4>Equestrian Gear</h4>
+                            <p>Handmade Leather Saddles, Bridles & Halters</p>
+                        </div>
+                        <div class="product-item">
+                            <span class="product-icon">🐕</span>
+                            <h4>Dog Gear</h4>
+                            <p>Handcrafted Leather Dog Collars & Accessories</p>
+                        </div>
+                    </div>
+                    
+                    <div class="operations-board">
+                        <h4>⚙️ Operational Core</h4>
+                        <ul class="operations-list">
+                            <li>
+                                <span class="op-label">Sales Channels:</span>
+                                <span class="op-val">Instagram & Facebook</span>
+                            </li>
+                            <li>
+                                <span class="op-label">Material Core:</span>
+                                <span class="op-val">Bespoke Genuine Handmade Leather</span>
+                            </li>
+                            <li>
+                                <span class="op-label">Shipping Profile:</span>
+                                <span class="op-val">Domestic & International Logistics</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Instagram Call To Action Button -->
+                    <a href="https://www.instagram.com/reinandhide.pk?igsh=NHB0Z2RmZ284Mzhh" target="_blank" class="insta-btn">
+                        <span class="insta-btn-icon">📸</span> Visit Instagram Shop
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

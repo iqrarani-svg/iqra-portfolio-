@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantry Web App Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .back-btn {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 25px;
+            transition: 0.2s;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            color: #60a5fa;
+        }
+        .project-header {
+            margin-bottom: 30px;
+        }
+        .project-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .tech-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .tech-badges span {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .project-content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        @media (max-width: 900px) {
+            .project-content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        .overview-section h2, .gallery-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+        .overview-section p {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .features-list {
+            padding-left: 20px;
+        }
+        .features-list li {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .features-list li strong {
+            color: #3b82f6;
+        }
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 500px) {
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .screenshot-card {
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .screenshot-card p {
+            padding: 12px;
+            font-size: 13px;
+            color: #94a3b8;
+            text-align: center;
+            margin: 0;
+            background: #111827;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        
+        <header class="project-header">
+            <h1>Pantry Web App</h1>
+            <div class="tech-badges">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+            </div>
+        </header>
+
+        <div class="project-content-grid">
+            <div class="overview-section">
+                <h2>Project Overview</h2>
+                <p>A dynamic and highly responsive web application designed to manage household kitchen inventories. It helps prevent food waste by keeping a clean record of your pantry stock, calculating budgets dynamically, and tracking product lifespans.</p>
+                
+                <h2 style="margin-top: 35px;">Key Features</h2>
+                <ul class="features-list">
+                    <li><strong>Barcode Scanning:</strong> Integrated local script logic to capture and log product codes swiftly using devices.</li>
+                    <li><strong>Dynamic Grocery List:</strong> Calculates estimated budgets in real-time as items are ticked off.</li>
+                    <li><strong>Smart Expiry Alerts:</strong> Highlights items approaching their best-before dates with custom UI indicators.</li>
+                </ul>
+            </div>
+
+            <div class="gallery-section">
+                <h2>Project Gallery</h2>
+                <div class="screenshots-grid">
+                    <div class="screenshot-card">
+                        <img src="pantry_home.jpeg" alt="Dashboard View">
+                        <p>1. Dashboard Overview</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_about.jpeg" alt="About App">
+                        <p>2. About Module</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_alert.jpeg" alt="Expiry Alerts">
+                        <p>3. Expiry Alerts Panel</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_found.jpeg" alt="Item Found Screen">
+                        <p>4. Item Found View</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_fruit.jpeg" alt="Fruit Category">
+                        <p>5. Fruits Section</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_list.jpeg" alt="Grocery List">
+                        <p>6. Dynamic Grocery List</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_login.jpeg" alt="User Login">
+                        <p>7. Login Screen</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_recipe.jpeg" alt="Recipe Finder">
+                        <p>8. Recipe Suggestions</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_veg.jpeg" alt="Vegetable Inventory">
+                        <p>9. Vegetables Section</p>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="pantry_home.jpeg" alt="Analytics Summary">
+                        <p>10. Inventory Summary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

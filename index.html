@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra Rani | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Iqra<span class="logo-accent">.Rani</span></div>
+       <nav>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+</nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container" style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 40px; flex-wrap: wrap;">
+            
+            <div class="hero-content" style="flex: 1.2; min-width: 300px;">
+                <span class="welcome-tag">Welcome to my space</span>
+                <h1 class="main-heading">Hi, I am <span class="gradient-text">Iqra Rani</span></h1>
+                <h2>Creative Frontend & WordPress Developer</h2>
+                <p>BS Information Technology graduate passionate about professional web design, creating responsive layouts using HTML & CSS, and exploring backend Python scripts. I craft solid digital experiences that perform flawlessly.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-glow">My Projects</a>
+                    <a href="contact.html" class="btn btn-outline">Let's Connect</a>
+                </div>
+            </div>
+
+            <div class="hero-image" style="flex: 0.8; text-align: center; min-width: 280px;">
+                <img src="my-pic.png.jpeg" alt="Iqra Rani" style="width: 280px; height: 280px; border-radius: 50%; border: 4px solid #3b82f6; object-fit: cover; box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills & API Widget Section -->
+<section id="skills-section" class="skills-api-container">
+    <div class="skills-box">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>HTML5 & CSS3 (Flexbox/Grid)</li>
+            <li>JavaScript (DOM & APIs)</li>
+            <li>WordPress & UI Design</li>
+            <li>Git & GitHub / Netlify Deployment</li>
+        </ul>
+    </div>
+    <div class="api-box">
+        <h3>Daily Random Joke</h3>
+        <p id="api-data">Click below to fetch a live joke!</p>
+        <button id="fetch-btn">Get Random Joke</button>
+    </div>
+
+</section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            
+            <a href="pantry-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="project-card">
+                    <span class="category-tag">Web App</span>
+                    <h3>Pantry Web App</h3>
+                    <p>A dynamic pantry manager with barcode scanner integration, grocery list generator, and real-time product expiry alerts.</p>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="student-details.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-card">
+                    <span class="category-tag">Python</span>
+                    <h3>Student Management System</h3>
+                    <p>A console-based software designed using Python to handle complex student data CRUD operations effortlessly.</p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>CRUD</span>
+                        <span>File Handling</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="brand-detail.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-card">
+                    <span class="category-tag">E-Commerce Brand</span>
+                    <h3>Rein & Hide</h3>
+                    <p>A premium e-commerce venture specializing in handmade leather equestrian gear, dog accessories, and bespoke polo belts, integrated with dynamic business operations.</p>
+                    <div class="tech-tags">
+                        <span>WordPress</span>
+                        <span>E-Commerce</span>
+                        <span>Meta Commerce</span>
+                        <span>Brand Dev</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Let's build something epic together!</h2>
+            <p>I am actively looking for WordPress & Frontend Developer internship or entry level job opportunities.</p>
+            <div class="contact-links">
+                <a href="https://linkedin.com" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:iqraahmed69116@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Email Me</a>
+            </div>
+            <p class="copyright">&copy; 2026 Iqra Rani. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
